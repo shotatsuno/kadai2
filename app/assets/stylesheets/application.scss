@@ -1,0 +1,121 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.main{
+	margin-left: 100px;
+}
+
+
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#header{
+	background-color:black;
+	padding-right: 80px;
+}
+
+.button-wrapper{
+	text-align:center;
+}
+
+
+.glyphicon-wrench{
+	padding: 10px 160px;
+}
+
+.Bookers{
+	float: left;
+	margin-left: 10px;
+	color:white;
+}
+
+.create_botton{
+	text-align:center;
+}
+
+.create_botton2{
+	font-size:20px;
+	color:white;
+	background-color:#337AB7;
+	padding: 10px 130px;
+}
+
+.top{
+	 text-align: center;
+}
+
+.mozi{
+	display: inline-block;
+	text-align: left;
+}
+
+.login{
+	background-color:#5BC0DE;
+	padding: 10px 200px;
+}
+.logout{
+	background-color:#5CB85C;
+	padding: 10px 195px;
+}
+
+.about{
+	margin-left: 70px;
+}
+
+.Log_in{
+	margin-left: 100px;
+}
+
+.Log_in_botton{
+	color: white;
+	background-color:#337AB7;
+	padding: 10px 20px;
+	border-radius:10px;
+}
+
+.Sign_up{
+	margin-left: 100px;
+}
+
+.Sign_up_botton{
+	color: white;
+	background-color:#5CB85C;
+	margin-top: 10px;
+	padding: 10px 20px;
+	border-radius:10px;
+}
+
+
+
+
+
+
+
+
+
+

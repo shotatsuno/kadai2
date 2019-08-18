@@ -1,0 +1,46 @@
+<% if @book.errors.any? %>
+<h2><%= @book.errors.count %> error prohibited this obj from being saved:</h2>
+	<ul>
+<% @book.errors.full_messages.each do |message| %>
+<li><%= message %></li>
+<% end %>
+<% end %>
+
+
+<section class="">
+	<h1>User info</h1>
+	<%= attachment_image_tag user, :profile_image, :fill,60,60, fallback: "no_image.jpg" %>
+	<table class="table table-striped">
+			<tr>
+				<td><p>name</p></td>
+				<td><%= user.name %></td>
+			</tr>
+			<tr>
+				<td><p>introduction</p></td>
+				<td><%= user.introduction %></td>
+			</tr>
+		</table>
+</section>
+<div class="button-wrapper">
+<button type="submit" class="edit_bottun">
+<% if current_user.id == @user.id %>
+<%= link_to "", edit_user_path(current_user), class:"glyphicon glyphicon-wrench" %>
+<% else %>
+
+<%= link_to 'edit', user_path(current_user),class:"glyphicon glyphicon-wrench" %>
+<% end %>
+</button>
+</div>
+
+<section class="">
+	<h1>New Book</h1>
+	<%= form_for(book) do |f| %><br>
+	<label>Title</label><br>
+	<%= f.text_field :title , :size=>"50" %><br>
+	<label>Opinion</label><br>
+	<%= f.text_area :body, :size=>"49" %><br>
+	<div class="create_botton">
+	<%= f.submit "create book",class:"create_botton2" %>
+    </div>
+	<% end %>
+</section> 
